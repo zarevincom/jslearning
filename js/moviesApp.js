@@ -23,23 +23,22 @@
 
 "use strict"
 
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
-
-const lastMovie = prompt("Один из последних просмотренных фильмов?", "");
-
-const lastMovieRating = prompt("На сколько оцените его?", "");
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
     count: numberOfFilms,
-    movies: {
-        
-    },
-    actors: {
-
-    },
-    genres: {
-
-    },
+    movies: {},
+    actors: {},
+    genres: {},
     private: false
 };
+
+const lastMovie = prompt("Один из последних просмотренных фильмов?", ""),
+      lastMovieRating = prompt("На сколько оцените его?", ""),
+      lastMovie2 = prompt("Один из последних просмотренных фильмов?", ""),
+      lastMovieRating2 = prompt("На сколько оцените его?", "");
+
 personalMovieDB.movies[lastMovie] = lastMovieRating;
+personalMovieDB.movies[lastMovie2] = lastMovieRating2;
+
+console.log(personalMovieDB);
